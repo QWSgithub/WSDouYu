@@ -35,6 +35,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54680DA9219328A700DF89DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				54680DAA219328A700DF89DD /* Home */,
+				54680DAB219328A700DF89DD /* Tools */,
+				54680DAC219328A700DF89DD /* Follow */,
+				54680DAD219328A700DF89DD /* Profile */,
+				54680DAE219328A700DF89DD /* Live */,
+				54680DAF219328A700DF89DD /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		54680DAA219328A700DF89DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		54680DAB219328A700DF89DD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		54680DAC219328A700DF89DD /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		54680DAD219328A700DF89DD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		54680DAE219328A700DF89DD /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		54680DAF219328A700DF89DD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CBED261F2192F272006139A2 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		CBED260F2192F272006139A2 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +110,9 @@
 		CBED261A2192F272006139A2 /* WSDY */ = {
 			isa = PBXGroup;
 			children = (
+				54680DA9219328A700DF89DD /* Classes */,
 				CBED261B2192F272006139A2 /* AppDelegate.swift */,
 				CBED261D2192F272006139A2 /* ViewController.swift */,
-				CBED261F2192F272006139A2 /* Main.storyboard */,
 				CBED26222192F273006139A2 /* Assets.xcassets */,
 				CBED26242192F273006139A2 /* LaunchScreen.storyboard */,
 				CBED26272192F273006139A2 /* Info.plist */,
