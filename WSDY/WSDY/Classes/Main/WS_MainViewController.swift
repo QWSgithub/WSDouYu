@@ -13,21 +13,21 @@ class WS_MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let childVc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!
-        addChild(childVc)
+    
         
-        let childVc2 = UIStoryboard(name: "Live", bundle: nil).instantiateInitialViewController()!
-        addChild(childVc2)
-
-        let childVc3 = UIStoryboard(name: "Follow", bundle: nil).instantiateInitialViewController()!
-        addChild(childVc3)
-        
-        
-        let childVc4 = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController()!
-        addChild(childVc4)
+        addChildVc(storyName: "Home")
+        addChildVc(storyName: "Live")
+        addChildVc(storyName: "Follow")
+        addChildVc(storyName: "Profile")
 
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    private func addChildVc(storyName : String){
+        let childVc = UIStoryboard(name: storyName, bundle: nil).instantiateInitialViewController()!
+        addChild(childVc)
     }
     
 
