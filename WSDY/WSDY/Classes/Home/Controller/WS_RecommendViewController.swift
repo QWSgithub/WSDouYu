@@ -36,7 +36,7 @@ class WS_RecommendViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight] //随着父控件扩展
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "WS_CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
  
         //注册头
         collectionView.register(UINib(nibName: "WS_CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
