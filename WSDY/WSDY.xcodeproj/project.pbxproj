@@ -13,6 +13,8 @@
 		54B78F4421933D6E00392C4C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B78F4321933D6E00392C4C /* Follow.storyboard */; };
 		54B78F47219462C800392C4C /* WS_CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B78F45219462C800392C4C /* WS_CollectionNormalCell.swift */; };
 		54B78F48219462C800392C4C /* WS_CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B78F46219462C800392C4C /* WS_CollectionNormalCell.xib */; };
+		54B78F4B219467D800392C4C /* WS_CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B78F49219467D800392C4C /* WS_CollectionPrettyCell.swift */; };
+		54B78F4C219467D800392C4C /* WS_CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B78F4A219467D800392C4C /* WS_CollectionPrettyCell.xib */; };
 		54D2602F219334BC00454448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D2602E219334BC00454448 /* Main.storyboard */; };
 		CB73A8FC2194038F0043311F /* WS_PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FB2194038F0043311F /* WS_PageContentView.swift */; };
 		CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */; };
@@ -38,6 +40,8 @@
 		54B78F4321933D6E00392C4C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		54B78F45219462C800392C4C /* WS_CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_CollectionNormalCell.swift; sourceTree = "<group>"; };
 		54B78F46219462C800392C4C /* WS_CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WS_CollectionNormalCell.xib; sourceTree = "<group>"; };
+		54B78F49219467D800392C4C /* WS_CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		54B78F4A219467D800392C4C /* WS_CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WS_CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		54D2602E219334BC00454448 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CB73A8FB2194038F0043311F /* WS_PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_PageContentView.swift; sourceTree = "<group>"; };
 		CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS_UIColor-Extension.swift"; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				CB73A8FB2194038F0043311F /* WS_PageContentView.swift */,
 				54B78F45219462C800392C4C /* WS_CollectionNormalCell.swift */,
 				54B78F46219462C800392C4C /* WS_CollectionNormalCell.xib */,
+				54B78F49219467D800392C4C /* WS_CollectionPrettyCell.swift */,
+				54B78F4A219467D800392C4C /* WS_CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				54B78F4221933D6200392C4C /* Profile.storyboard in Resources */,
 				54D2602F219334BC00454448 /* Main.storyboard in Resources */,
 				CBED26262192F273006139A2 /* LaunchScreen.storyboard in Resources */,
+				54B78F4C219467D800392C4C /* WS_CollectionPrettyCell.xib in Resources */,
 				54B78F48219462C800392C4C /* WS_CollectionNormalCell.xib in Resources */,
 				CBED26232192F273006139A2 /* Assets.xcassets in Resources */,
 				54B78F4421933D6E00392C4C /* Follow.storyboard in Resources */,
@@ -313,6 +320,7 @@
 				CBE85F5D2193C78700DCFA6F /* WS_HomeViewController.swift in Sources */,
 				CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */,
 				CBE85F632193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift in Sources */,
+				54B78F4B219467D800392C4C /* WS_CollectionPrettyCell.swift in Sources */,
 				CB73A902219426530043311F /* WS_RecommendViewController.swift in Sources */,
 				CB73A905219446480043311F /* WS_CollectionHeaderView.swift in Sources */,
 				CB73A9002194113E0043311F /* WS_UIView_Extension.swift in Sources */,
