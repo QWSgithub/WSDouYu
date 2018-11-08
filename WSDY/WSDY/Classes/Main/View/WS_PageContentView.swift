@@ -23,6 +23,8 @@ class WS_PageContentView: UIView {
     
     private var startOfsetX :CGFloat = 0
     
+    private var isForbidScrollDelegate: Bool = false //禁止f执行代理事件
+    
     weak var delegate: WS_PageContentViewDelegate?
     
     private lazy var collectionView: UICollectionView = {[weak self] in
@@ -98,10 +100,19 @@ extension WS_PageContentView: UICollectionViewDataSource {
 
 extension WS_PageContentView : UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
         startOfsetX = scrollView.contentOffset.x
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        //判断是否是点击事件引起的滚动
+        if isForbidScrollDelegate {
+            return
+        }
+        
         var progress: CGFloat = 0
         var sourceIndex: Int = 0
         var targetIndex: Int = 0
@@ -146,6 +157,10 @@ extension WS_PageContentView : UICollectionViewDelegate {
 // MARK:- 对外暴露的方法
 extension WS_PageContentView {
     func setCurrentIndex(currentIndex: Int)  {
+        
+        //需要禁止执行代理方法
+        isForbidScrollDelegate = true
+        
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
     }
