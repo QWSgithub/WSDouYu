@@ -39,14 +39,13 @@ class WS_RecommendViewController: UIViewController {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
  
         //注册头
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        collectionView.register(UINib(nibName: "WS_CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+
+        collectionView.backgroundColor = UIColor.white
+       
         
-        collectionView.backgroundColor = UIColor.red
 //         let collectionViewFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height - WS_NavigationBarH - WS_TabbarH - 40)
 //        collectionView.frame = collectionViewFrame
-        
-        
-        
         
         return collectionView
     }()
@@ -97,7 +96,7 @@ extension WS_RecommendViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        headerView.backgroundColor = UIColor.randomColor()
+       
         return headerView
     }
     
