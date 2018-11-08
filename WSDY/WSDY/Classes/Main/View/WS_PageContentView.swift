@@ -40,7 +40,11 @@ class WS_PageContentView: UIView {
         collectionView.bounces = false
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = UIColor.yellow
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
+        
+      
+        
         return collectionView
     }()
     
@@ -91,6 +95,9 @@ extension WS_PageContentView: UICollectionViewDataSource {
         
         let childVc = childVcs[indexPath.item]
         childVc.view.frame = cell.contentView.bounds
+        
+        childVc.view.backgroundColor  = UIColor.blue
+        
         cell.contentView.addSubview(childVc.view)
         return cell
         

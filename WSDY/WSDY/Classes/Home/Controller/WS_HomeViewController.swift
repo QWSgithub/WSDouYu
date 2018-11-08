@@ -22,17 +22,22 @@ class WS_HomeViewController: UIViewController {
     }()
     
     private lazy var pageContentView: WS_PageContentView = {[weak self] in
-        let contentH = WS_ScreenH - WS_NavigationBarH - kTitleViewH
+        let contentH = WS_ScreenH - kTitleViewH - WS_TabbarH - WS_NavigationBarH 
         let contentFrame = CGRect(x: 0, y: WS_NavigationBarH + kTitleViewH, width: WS_ScreenW, height: contentH)
         
         var childVcs = [UIViewController]()
-        for _ in 0..<4 {
+        
+        childVcs.append(WS_RecommendViewController())
+        
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
         }
         let contentView = WS_PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
+
+        
         return contentView
     }()
     

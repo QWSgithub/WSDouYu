@@ -15,6 +15,7 @@
 		CB73A8FC2194038F0043311F /* WS_PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FB2194038F0043311F /* WS_PageContentView.swift */; };
 		CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */; };
 		CB73A9002194113E0043311F /* WS_UIView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FF2194113E0043311F /* WS_UIView_Extension.swift */; };
+		CB73A902219426530043311F /* WS_RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A901219426530043311F /* WS_RecommendViewController.swift */; };
 		CBE85F5B2193C71F00DCFA6F /* WS_MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE85F5A2193C71F00DCFA6F /* WS_MainViewController.swift */; };
 		CBE85F5D2193C78700DCFA6F /* WS_HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE85F5C2193C78700DCFA6F /* WS_HomeViewController.swift */; };
 		CBE85F632193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE85F622193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift */; };
@@ -35,6 +36,7 @@
 		CB73A8FB2194038F0043311F /* WS_PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_PageContentView.swift; sourceTree = "<group>"; };
 		CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS_UIColor-Extension.swift"; sourceTree = "<group>"; };
 		CB73A8FF2194113E0043311F /* WS_UIView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_UIView_Extension.swift; sourceTree = "<group>"; };
+		CB73A901219426530043311F /* WS_RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_RecommendViewController.swift; sourceTree = "<group>"; };
 		CBE85F5A2193C71F00DCFA6F /* WS_MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WS_MainViewController.swift; sourceTree = "<group>"; };
 		CBE85F5C2193C78700DCFA6F /* WS_HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_HomeViewController.swift; sourceTree = "<group>"; };
 		CBE85F622193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS_UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				54B78F3D21933D5000392C4C /* Home.storyboard */,
 				CBE85F5C2193C78700DCFA6F /* WS_HomeViewController.swift */,
+				CB73A901219426530043311F /* WS_RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				CBE85F5D2193C78700DCFA6F /* WS_HomeViewController.swift in Sources */,
 				CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */,
 				CBE85F632193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift in Sources */,
+				CB73A902219426530043311F /* WS_RecommendViewController.swift in Sources */,
 				CB73A9002194113E0043311F /* WS_UIView_Extension.swift in Sources */,
 				CB73A8FC2194038F0043311F /* WS_PageContentView.swift in Sources */,
 			);
