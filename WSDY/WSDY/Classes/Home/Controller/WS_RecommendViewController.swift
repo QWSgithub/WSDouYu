@@ -27,6 +27,10 @@ private let kPrettyCellID = "kPrettyCellID"
 
 
 class WS_RecommendViewController: UIViewController {
+    
+    
+    private lazy var recommendVM: WS_RecommendViewModel = WS_RecommendViewModel()
+    
 
     private lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -66,7 +70,8 @@ class WS_RecommendViewController: UIViewController {
 
         setupUI()
         
-        view.backgroundColor = UIColor.cyan
+        //发送网络请求
+        loadData()
     }
     
 
@@ -80,21 +85,40 @@ extension WS_RecommendViewController {
     }
 }
 
+// MARK:- 请求数据
+extension WS_RecommendViewController {
+    private func loadData() {
+        
+        
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+        }
+        
+    }
+}
+
+
 // MARK:- 遵守UICollectionViewDataSource
 extension WS_RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroup.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let group = recommendVM.anchorGroup[section]
         
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let arr:[AnyObject] = group as! [AnyObject]
+        
+//        print(arr.count)
+        return arr.count
+        
+//        if section == 0 {
+//            return 8
+//        }
+//        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -114,6 +138,11 @@ extension WS_RecommendViewController : UICollectionViewDataSource,UICollectionVi
         //取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
        
+        let group = recommendVM.anchorGroup[indexPath.section]
+        
+        let arr:[AnyObject] = group as! [AnyObject]
+        
+        
         return headerView
     }
     

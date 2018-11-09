@@ -18,6 +18,9 @@
 		54B78F4E2194713B00392C4C /* WS_NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B78F4D2194713B00392C4C /* WS_NetworkTools.swift */; };
 		54D2602F219334BC00454448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D2602E219334BC00454448 /* Main.storyboard */; };
 		603756F0D2D8514DE1137C85 /* Pods_WSDY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38D1FEC32DD7DEF0B2C324C /* Pods_WSDY.framework */; };
+		CB62F7B2219535F100436FF6 /* WS_RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62F7B1219535F100436FF6 /* WS_RecommendViewModel.swift */; };
+		CB62F7B421953DE200436FF6 /* WS_NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62F7B321953DE200436FF6 /* WS_NSDate-Extension.swift */; };
+		CB62F7BE219560CA00436FF6 /* WS_AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62F7BD219560CA00436FF6 /* WS_AnchorGroup.swift */; };
 		CB73A8FC2194038F0043311F /* WS_PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FB2194038F0043311F /* WS_PageContentView.swift */; };
 		CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */; };
 		CB73A9002194113E0043311F /* WS_UIView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8FF2194113E0043311F /* WS_UIView_Extension.swift */; };
@@ -49,6 +52,9 @@
 		54D2602E219334BC00454448 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C38D1FEC32DD7DEF0B2C324C /* Pods_WSDY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSDY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C741CB0B755B4318EFB4A2D5 /* Pods-WSDY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSDY.release.xcconfig"; path = "Pods/Target Support Files/Pods-WSDY/Pods-WSDY.release.xcconfig"; sourceTree = "<group>"; };
+		CB62F7B1219535F100436FF6 /* WS_RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_RecommendViewModel.swift; sourceTree = "<group>"; };
+		CB62F7B321953DE200436FF6 /* WS_NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS_NSDate-Extension.swift"; sourceTree = "<group>"; };
+		CB62F7BD219560CA00436FF6 /* WS_AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_AnchorGroup.swift; sourceTree = "<group>"; };
 		CB73A8FB2194038F0043311F /* WS_PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_PageContentView.swift; sourceTree = "<group>"; };
 		CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS_UIColor-Extension.swift"; sourceTree = "<group>"; };
 		CB73A8FF2194113E0043311F /* WS_UIView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS_UIView_Extension.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		54680DAA219328A700DF89DD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CB62F7B0219535B300436FF6 /* ViewModel */,
 				CBE85F542193C6EE00DCFA6F /* Controller */,
 				CBE85F562193C6EE00DCFA6F /* Model */,
 				CBE85F552193C6EE00DCFA6F /* View */,
@@ -153,6 +160,14 @@
 				54D2602E219334BC00454448 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CB62F7B0219535B300436FF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB62F7B1219535F100436FF6 /* WS_RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CBE85F542193C6EE00DCFA6F /* Controller */ = {
@@ -197,6 +212,7 @@
 		CBE85F582193C71F00DCFA6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB62F7BD219560CA00436FF6 /* WS_AnchorGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +241,7 @@
 				CBE85F622193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift */,
 				CB73A8FD219406190043311F /* WS_UIColor-Extension.swift */,
 				CB73A8FF2194113E0043311F /* WS_UIView_Extension.swift */,
+				CB62F7B321953DE200436FF6 /* WS_NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -344,10 +361,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WSDY/Pods-WSDY-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -381,14 +400,17 @@
 			files = (
 				CBED261E2192F272006139A2 /* ViewController.swift in Sources */,
 				CBED261C2192F272006139A2 /* AppDelegate.swift in Sources */,
+				CB62F7B421953DE200436FF6 /* WS_NSDate-Extension.swift in Sources */,
 				CBE85F652193D2A900DCFA6F /* WS_PageTitleView.swift in Sources */,
 				54B78F47219462C800392C4C /* WS_CollectionNormalCell.swift in Sources */,
 				54B78F4E2194713B00392C4C /* WS_NetworkTools.swift in Sources */,
+				CB62F7B2219535F100436FF6 /* WS_RecommendViewModel.swift in Sources */,
 				CBE85F5B2193C71F00DCFA6F /* WS_MainViewController.swift in Sources */,
 				CBE85F672193D55300DCFA6F /* WS_Common.swift in Sources */,
 				CBE85F5D2193C78700DCFA6F /* WS_HomeViewController.swift in Sources */,
 				CB73A8FE219406190043311F /* WS_UIColor-Extension.swift in Sources */,
 				CBE85F632193CDA000DCFA6F /* WS_UIBarButtonItem-Extension.swift in Sources */,
+				CB62F7BE219560CA00436FF6 /* WS_AnchorGroup.swift in Sources */,
 				54B78F4B219467D800392C4C /* WS_CollectionPrettyCell.swift in Sources */,
 				CB73A902219426530043311F /* WS_RecommendViewController.swift in Sources */,
 				CB73A905219446480043311F /* WS_CollectionHeaderView.swift in Sources */,

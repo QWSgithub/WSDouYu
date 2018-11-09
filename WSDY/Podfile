@@ -9,4 +9,6 @@ target 'WSDY' do
 
 pod 'Alamofire', '4.7.3'
 
+pod 'HandyJSON', '4.2.0'
+
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 private let kTitleViewH : CGFloat = 40
 
 class WS_HomeViewController: UIViewController {
@@ -47,10 +48,14 @@ class WS_HomeViewController: UIViewController {
         view.backgroundColor = UIColor.blue
         //设置UI界面
         setupUI()
-       
+        
     }
     
 }
+
+
+
+
 
 // MARK:- 设置UI界面
 extension WS_HomeViewController {
