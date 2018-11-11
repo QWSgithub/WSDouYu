@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WS_CollectionPrettyCell" customModule="WSDY" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="202"/>
+            <rect key="frame" x="0.0" y="0.0" width="261" height="289"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="140" height="202"/>
+                <rect key="frame" x="0.0" y="0.0" width="261" height="289"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE4-75-K27">
-                        <rect key="frame" x="0.0" y="178" width="47" height="14"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE4-75-K27">
+                        <rect key="frame" x="0.0" y="265" width="47" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="68d-g4-FN9"/>
                         </constraints>
@@ -30,7 +30,7 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEH-iq-r5P">
-                        <rect key="frame" x="0.0" y="157" width="140" height="16"/>
+                        <rect key="frame" x="0.0" y="244" width="261" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="zLY-LP-kfF"/>
                         </constraints>
@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="RiY-II-zSb">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="152"/>
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="239"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="5"/>
@@ -47,41 +47,48 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyk-ym-55b">
-                        <rect key="frame" x="75" y="5" width="60" height="20"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-a0-Lo9">
+                        <rect key="frame" x="193" y="8" width="60" height="20"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="XhK-oQ-6Ss"/>
-                            <constraint firstAttribute="width" constant="60" id="dkg-Ru-1ze"/>
+                            <constraint firstAttribute="height" constant="20" id="1hU-4K-GnA"/>
+                            <constraint firstAttribute="width" constant="60" id="zKV-KA-rPW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="lE4-75-K27" firstAttribute="top" secondItem="eEH-iq-r5P" secondAttribute="bottom" constant="5" id="8Sr-aS-5MN"/>
                 <constraint firstAttribute="trailing" secondItem="eEH-iq-r5P" secondAttribute="trailing" id="BIF-lc-mie"/>
                 <constraint firstItem="RiY-II-zSb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="C7W-EA-CEi"/>
+                <constraint firstItem="fwk-a0-Lo9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Qml-ZA-geW"/>
                 <constraint firstItem="RiY-II-zSb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qml-n5-YYj"/>
-                <constraint firstAttribute="trailing" secondItem="Pyk-ym-55b" secondAttribute="trailing" constant="5" id="TnI-td-tbP"/>
                 <constraint firstItem="eEH-iq-r5P" firstAttribute="top" secondItem="RiY-II-zSb" secondAttribute="bottom" constant="5" id="UG8-eq-ROM"/>
                 <constraint firstAttribute="trailing" secondItem="RiY-II-zSb" secondAttribute="trailing" id="cqb-JT-Bvx"/>
-                <constraint firstItem="Pyk-ym-55b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="eYq-jB-9yc"/>
                 <constraint firstItem="eEH-iq-r5P" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hYp-jW-1Uw"/>
                 <constraint firstItem="lE4-75-K27" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kTH-Yk-xcG"/>
                 <constraint firstAttribute="bottom" secondItem="lE4-75-K27" secondAttribute="bottom" constant="10" id="o7V-yZ-M4b"/>
+                <constraint firstAttribute="trailing" secondItem="fwk-a0-Lo9" secondAttribute="trailing" constant="8" id="oLe-Fa-WnD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="140" height="202"/>
-            <point key="canvasLocation" x="81.599999999999994" y="70.164917541229386"/>
+            <size key="customSize" width="261" height="289"/>
+            <connections>
+                <outlet property="cityBtn" destination="lE4-75-K27" id="YEO-9n-UO1"/>
+                <outlet property="iconImageView" destination="RiY-II-zSb" id="JKn-yt-XOw"/>
+                <outlet property="nickNameLabel" destination="eEH-iq-r5P" id="Mxc-DM-mJE"/>
+                <outlet property="onlineBtn" destination="fwk-a0-Lo9" id="eZI-ym-Aeb"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="76.011994002998506"/>
         </collectionViewCell>
     </objects>
     <resources>

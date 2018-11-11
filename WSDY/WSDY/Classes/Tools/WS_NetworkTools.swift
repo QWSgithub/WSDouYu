@@ -76,6 +76,7 @@ extension WS_NetworkTools {
         Alamofire.request(UrlString, method: httpMethod, parameters: params, encoding: encoding, headers: headers).responseJSON { (response) in
             if response.result.isSuccess {
 
+
 //                    let obj = WS_AnchorGroup.deserialize(from: jsonString as? NSDictionary)
 //                    print(obj?.data[0].tag_name)
 

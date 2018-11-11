@@ -108,41 +108,67 @@ extension WS_RecommendViewController : UICollectionViewDataSource,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let group = recommendVM.anchorGroup[section]
+        let group = recommendVM.anchorGroup[section] as WS_BaseModel
+        return group.normalGroup.count
         
-        let arr:[AnyObject] = group as! [AnyObject]
+//        let arr:[Any] = group as! [Any]
+//        return arr.count
         
-//        print(arr.count)
-        return arr.count
-        
-//        if section == 0 {
-//            return 8
-//        }
-//        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell: UICollectionViewCell
+        
+        let baseMdoel = recommendVM.anchorGroup[indexPath.section] as WS_BaseModel
+        let norMalMode =  baseMdoel.normalGroup[indexPath.item]
+
         
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! WS_CollectionPrettyCell
+            cell.anchor = norMalMode
+            return cell
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! WS_CollectionNormalCell
+            if indexPath.section == 2 {
+                cell.youXiModel = norMalMode
+            }else{
+                cell.anchor = norMalMode
+            }
+            
+            return cell
         }
         
-        return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //取出headerView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! WS_CollectionHeaderView
        
-        let group = recommendVM.anchorGroup[indexPath.section]
-        
-        let arr:[AnyObject] = group as! [AnyObject]
+        let baseMdoel = recommendVM.anchorGroup[indexPath.section] as WS_BaseModel
         
         
+        
+//        let arr:[Any] = group as! [Any]
+//        if let realItem = arr.first as? WS_YanzhiModel {
+////            print("1111111111")
+////            print(realItem)
+//        } else if let realItem = arr.first as? WS_YouXiModel {
+////            print("2222222222")
+////            print(realItem)
+//            arr.forEach { (mewa) in
+//                print(mewa)
+//            }
+//
+//        } else if let realItem = arr.first as? WS_TuijianModel {
+////            print("3333333333")
+////            print(realItem.game_name)
+//        }
+        
+       
+        
+        
+
+        headerView.group = baseMdoel
         return headerView
     }
     

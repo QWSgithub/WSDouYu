@@ -21,9 +21,5 @@ let topSafeAreaHeight = (WS_StatusBarH - 20)
 let bottomSafeAreaHeight = (WS_TabbarH - 49)
 
 
-func WSColor(r:CGFloat,_ g:CGFloat,_ b:CGFloat) -> UIColor
-{
-    return UIColor(red: (r)/255.0, green: (g)/255.0, blue: (b)/255.0, alpha: 1.0)
-}
 
 
